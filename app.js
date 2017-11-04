@@ -1,5 +1,6 @@
 var express = require('express');
 var todoController = require('./controllers/todoController');
+var todoApiController = require('./controllers/todoApiController');
 var app = express();
 
 //set up template engine
@@ -11,6 +12,7 @@ app.use(express.static('./public'));
 // fire the controller
 
 todoController(app);
+todoApiController(app);
 
 
 //listen to port

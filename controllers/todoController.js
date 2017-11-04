@@ -4,10 +4,11 @@
 
 
  // Connect to mongoDB Database
+
  mongoose.Promise = global.Promise ;
  mongoose.connect('mongodb://piashsarker:piash@ds147265.mlab.com:47265/piashsarker_todo_database' , {
    useMongoClient : true
- })
+ });
 
 // create a schema - this is like a blueprint
 
@@ -50,7 +51,6 @@ module.exports= function(app){
 
 
   });
-
 
   app.get('/todo',function(req, res){
       // get data from the mongoDb and pass it to the view
@@ -97,6 +97,11 @@ module.exports= function(app){
           });
   });
 
+
+
+
+
+ module.exports.todoModel = todoModel ;
 
 
 
