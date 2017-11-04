@@ -14,6 +14,5 @@ todoController(app);
 
 
 //listen to port
-var PORT = 3000 || process.env.PORT ;
-app.listen(PORT);
+app.listen(process.env.PORT || 5000);
 console.log('listening in 3000 PORT');
